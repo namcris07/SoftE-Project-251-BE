@@ -13,7 +13,12 @@ import adminRoutes from "./routes/admin.routes.js";
 
 // ✅ Tạo app TRƯỚC khi dùng app.use()
 const app = express();
-
+// ✅ Cho phép frontend truy cập
+app.use(cors({
+  origin: ["https://softe-project-client.vercel.app"], // domain frontend
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+}));
 // ✅ Middleware
 app.use(cors({ origin: "*" }));
 app.use(express.json());
