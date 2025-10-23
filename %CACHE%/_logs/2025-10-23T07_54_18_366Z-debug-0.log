@@ -1,0 +1,444 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.3
+2 info using node@v22.20.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:D:\Assignment\Công nghệ phân mềm\SoftE-Project-251\backend\.npmrc
+5 silly config load:file:C:\Users\DELL\.npmrc
+6 silly config load:file:D:\Assignment\Công nghệ phân mềm\SoftE-Project-251\backend\%PREFIX%\etc\npmrc
+7 verbose title npm uninstall bcrypt
+8 verbose argv "uninstall" "bcrypt"
+9 verbose logfile logs-max:10 dir:D:\Assignment\Công nghệ phân mềm\SoftE-Project-251\backend\%CACHE%\_logs\2025-10-23T07_54_18_366Z-
+10 verbose logfile D:\Assignment\Công nghệ phân mềm\SoftE-Project-251\backend\%CACHE%\_logs\2025-10-23T07_54_18_366Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly reify mark retired [
+15 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\@mapbox\\node-pre-gyp',
+15 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\node-pre-gyp',
+15 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\node-pre-gyp.cmd',
+15 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\node-pre-gyp.ps1'
+15 silly reify ]
+16 silly reify mark retired [
+16 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\abbrev'
+16 silly reify ]
+17 silly reify mark retired [
+17 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\agent-base'
+17 silly reify ]
+18 silly reify mark retired [
+18 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\ansi-regex'
+18 silly reify ]
+19 silly reify mark retired [
+19 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\aproba'
+19 silly reify ]
+20 silly reify mark retired [
+20 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\are-we-there-yet'
+20 silly reify ]
+21 silly reify mark retired [
+21 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\balanced-match'
+21 silly reify ]
+22 silly reify mark retired [
+22 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\bcrypt'
+22 silly reify ]
+23 silly reify mark retired [
+23 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\brace-expansion'
+23 silly reify ]
+24 silly reify mark retired [
+24 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\chownr'
+24 silly reify ]
+25 silly reify mark retired [
+25 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\color-support',
+25 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\color-support',
+25 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\color-support.cmd',
+25 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\color-support.ps1'
+25 silly reify ]
+26 silly reify mark retired [
+26 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\concat-map'
+26 silly reify ]
+27 silly reify mark retired [
+27 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\console-control-strings'
+27 silly reify ]
+28 silly reify mark retired [
+28 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\delegates'
+28 silly reify ]
+29 silly reify mark retired [
+29 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\detect-libc'
+29 silly reify ]
+30 silly reify mark retired [
+30 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\emoji-regex'
+30 silly reify ]
+31 silly reify mark retired [
+31 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\fs-minipass'
+31 silly reify ]
+32 silly reify mark retired [
+32 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\fs.realpath'
+32 silly reify ]
+33 silly reify mark retired [
+33 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\gauge'
+33 silly reify ]
+34 silly reify mark retired [
+34 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\glob'
+34 silly reify ]
+35 silly reify mark retired [
+35 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\has-unicode'
+35 silly reify ]
+36 silly reify mark retired [
+36 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\https-proxy-agent'
+36 silly reify ]
+37 silly reify mark retired [
+37 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\inflight'
+37 silly reify ]
+38 silly reify mark retired [
+38 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\is-fullwidth-code-point'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\make-dir'
+39 silly reify ]
+40 silly reify mark retired [
+40 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\minimatch'
+40 silly reify ]
+41 silly reify mark retired [
+41 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\minipass'
+41 silly reify ]
+42 silly reify mark retired [
+42 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\minizlib'
+42 silly reify ]
+43 silly reify mark retired [
+43 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\mkdirp',
+43 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\mkdirp',
+43 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\mkdirp.cmd',
+43 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\mkdirp.ps1'
+43 silly reify ]
+44 silly reify mark retired [
+44 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\node-addon-api'
+44 silly reify ]
+45 silly reify mark retired [
+45 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\node-fetch'
+45 silly reify ]
+46 silly reify mark retired [
+46 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\nopt',
+46 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\nopt',
+46 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\nopt.cmd',
+46 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\nopt.ps1'
+46 silly reify ]
+47 silly reify mark retired [
+47 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\npmlog'
+47 silly reify ]
+48 silly reify mark retired [
+48 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\once'
+48 silly reify ]
+49 silly reify mark retired [
+49 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\path-is-absolute'
+49 silly reify ]
+50 silly reify mark retired [
+50 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\readable-stream'
+50 silly reify ]
+51 silly reify mark retired [
+51 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\rimraf',
+51 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\rimraf',
+51 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\rimraf.cmd',
+51 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\rimraf.ps1'
+51 silly reify ]
+52 silly reify mark retired [
+52 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\set-blocking'
+52 silly reify ]
+53 silly reify mark retired [
+53 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\signal-exit'
+53 silly reify ]
+54 silly reify mark retired [
+54 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\string_decoder'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\string-width'
+55 silly reify ]
+56 silly reify mark retired [
+56 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\strip-ansi'
+56 silly reify ]
+57 silly reify mark retired [
+57 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\tar'
+57 silly reify ]
+58 silly reify mark retired [
+58 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\tr46'
+58 silly reify ]
+59 silly reify mark retired [
+59 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\util-deprecate'
+59 silly reify ]
+60 silly reify mark retired [
+60 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\webidl-conversions'
+60 silly reify ]
+61 silly reify mark retired [
+61 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\whatwg-url'
+61 silly reify ]
+62 silly reify mark retired [
+62 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\wide-align'
+62 silly reify ]
+63 silly reify mark retired [
+63 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\wrappy'
+63 silly reify ]
+64 silly reify mark retired [
+64 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\yallist'
+64 silly reify ]
+65 silly reify moves {
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\@mapbox\\node-pre-gyp': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\@mapbox\\.node-pre-gyp-mPugI8HY',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\node-pre-gyp': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.node-pre-gyp-UWxApK58',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\node-pre-gyp.cmd': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.node-pre-gyp.cmd-qzGMTNyV',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\node-pre-gyp.ps1': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.node-pre-gyp.ps1-UmzatZ0J',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\abbrev': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.abbrev-Ro6yUbWJ',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\agent-base': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.agent-base-tzXsQDVX',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\ansi-regex': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.ansi-regex-2BNQgZn1',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\aproba': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.aproba-h869Kkmv',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\are-we-there-yet': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.are-we-there-yet-ASRMPDFA',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\balanced-match': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.balanced-match-YYTaHtTW',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\bcrypt': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bcrypt-BBbx7Leb',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\brace-expansion': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.brace-expansion-jGZmr08i',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\chownr': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.chownr-wHOWyfXV',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\color-support': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.color-support-7Unrfoyd',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\color-support': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.color-support-0w8M62SL',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\color-support.cmd': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.color-support.cmd-Ju8Bwdxl',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\color-support.ps1': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.color-support.ps1-LRuATlex',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\concat-map': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.concat-map-7ys4HyOc',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\console-control-strings': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.console-control-strings-SyzcUa85',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\delegates': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.delegates-rvBw49Gn',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\detect-libc': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.detect-libc-2QsGfhaI',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\emoji-regex': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.emoji-regex-jjY7SNOl',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\fs-minipass': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.fs-minipass-N5fmgLdw',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\fs.realpath': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.fs.realpath-s1CtppG7',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\gauge': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.gauge-UmsHXO5R',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\glob': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.glob-8c1j4TIH',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\has-unicode': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.has-unicode-lDhPI4WP',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\https-proxy-agent': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.https-proxy-agent-lqNiUePx',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\inflight': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.inflight-RyEQYp2I',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\is-fullwidth-code-point': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.is-fullwidth-code-point-jyYpDVL1',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\make-dir': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.make-dir-3ZwTJKTv',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\minimatch': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.minimatch-f9A3eqmv',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\minipass': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.minipass-ioaowa2N',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\minizlib': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.minizlib-RR1UbfEZ',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\mkdirp': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.mkdirp-oH67druG',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\mkdirp': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.mkdirp-nbFDqL09',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\mkdirp.cmd': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.mkdirp.cmd-yYtGLMB3',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\mkdirp.ps1': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.mkdirp.ps1-L6oYxTbQ',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\node-addon-api': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.node-addon-api-PuU4UEFX',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\node-fetch': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.node-fetch-sjvDW5v4',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\nopt': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.nopt-fLvSFbU7',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\nopt': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.nopt-iBlaJWKQ',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\nopt.cmd': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.nopt.cmd-ABUwayki',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\nopt.ps1': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.nopt.ps1-OutVAD69',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\npmlog': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.npmlog-PPaKpn2U',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\once': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.once-4mwQatW4',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\path-is-absolute': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.path-is-absolute-qON3zHIP',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\readable-stream': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.readable-stream-BNRq5vzq',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\rimraf': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.rimraf-lvFRGn8K',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\rimraf': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.rimraf-BGio2Fw3',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\rimraf.cmd': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.rimraf.cmd-NAY4bbVh',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\rimraf.ps1': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.bin\\.rimraf.ps1-NLFuAvK2',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\set-blocking': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.set-blocking-tuuVfake',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\signal-exit': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.signal-exit-E22j5WHv',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\string_decoder': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.string_decoder-n9DhKnF2',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\string-width': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.string-width-5vvkbMk6',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\strip-ansi': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.strip-ansi-7YAib5nO',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\tar': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.tar-uw0WxmKf',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\tr46': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.tr46-0pOuGg4o',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\util-deprecate': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.util-deprecate-uRq4OQg7',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\webidl-conversions': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.webidl-conversions-GossSBWS',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\whatwg-url': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.whatwg-url-NZgQ9i1D',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\wide-align': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.wide-align-EEHMMffF',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\wrappy': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.wrappy-AG2Toeok',
+65 silly reify   'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\yallist': 'D:\\Assignment\\Công nghệ phân mềm\\SoftE-Project-251\\backend\\node_modules\\.yallist-g5PLJKf4'
+65 silly reify }
+66 silly audit bulk request {
+66 silly audit   '@types/debug': [ '4.1.12' ],
+66 silly audit   '@types/ms': [ '2.1.0' ],
+66 silly audit   '@types/node': [ '24.9.1' ],
+66 silly audit   '@types/validator': [ '13.15.3' ],
+66 silly audit   accepts: [ '1.3.8' ],
+66 silly audit   debug: [ '2.6.9', '4.4.3' ],
+66 silly audit   ms: [ '2.1.3', '2.0.0' ],
+66 silly audit   'array-flatten': [ '1.1.1' ],
+66 silly audit   'aws-ssl-profiles': [ '1.1.2' ],
+66 silly audit   'body-parser': [ '1.20.3' ],
+66 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+66 silly audit   bytes: [ '3.1.2' ],
+66 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+66 silly audit   'call-bound': [ '1.0.4' ],
+66 silly audit   'content-disposition': [ '0.5.4' ],
+66 silly audit   'content-type': [ '1.0.5' ],
+66 silly audit   cookie: [ '0.7.1' ],
+66 silly audit   'cookie-signature': [ '1.0.6' ],
+66 silly audit   cors: [ '2.8.5' ],
+66 silly audit   denque: [ '2.1.0' ],
+66 silly audit   depd: [ '2.0.0' ],
+66 silly audit   destroy: [ '1.2.0' ],
+66 silly audit   dotenv: [ '16.6.1' ],
+66 silly audit   dottie: [ '2.0.6' ],
+66 silly audit   'dunder-proto': [ '1.0.1' ],
+66 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+66 silly audit   'ee-first': [ '1.1.1' ],
+66 silly audit   encodeurl: [ '2.0.0', '1.0.2' ],
+66 silly audit   'es-define-property': [ '1.0.1' ],
+66 silly audit   'es-errors': [ '1.3.0' ],
+66 silly audit   'es-object-atoms': [ '1.1.1' ],
+66 silly audit   'escape-html': [ '1.0.3' ],
+66 silly audit   etag: [ '1.8.1' ],
+66 silly audit   express: [ '4.21.2' ],
+66 silly audit   finalhandler: [ '1.3.1' ],
+66 silly audit   forwarded: [ '0.2.0' ],
+66 silly audit   fresh: [ '0.5.2' ],
+66 silly audit   'function-bind': [ '1.1.2' ],
+66 silly audit   'generate-function': [ '2.3.1' ],
+66 silly audit   'get-intrinsic': [ '1.3.0' ],
+66 silly audit   'get-proto': [ '1.0.1' ],
+66 silly audit   gopd: [ '1.2.0' ],
+66 silly audit   'has-symbols': [ '1.1.0' ],
+66 silly audit   hasown: [ '2.0.2' ],
+66 silly audit   'http-errors': [ '2.0.0' ],
+66 silly audit   'iconv-lite': [ '0.4.24', '0.7.0' ],
+66 silly audit   inflection: [ '1.13.4' ],
+66 silly audit   inherits: [ '2.0.4' ],
+66 silly audit   'ipaddr.js': [ '1.9.1' ],
+66 silly audit   'is-property': [ '1.0.2' ],
+66 silly audit   jsonwebtoken: [ '9.0.2' ],
+66 silly audit   jwa: [ '1.4.2' ],
+66 silly audit   jws: [ '3.2.2' ],
+66 silly audit   lodash: [ '4.17.21' ],
+66 silly audit   'lodash.includes': [ '4.3.0' ],
+66 silly audit   'lodash.isboolean': [ '3.0.3' ],
+66 silly audit   'lodash.isinteger': [ '4.0.4' ],
+66 silly audit   'lodash.isnumber': [ '3.0.3' ],
+66 silly audit   'lodash.isplainobject': [ '4.0.6' ],
+66 silly audit   'lodash.isstring': [ '4.0.1' ],
+66 silly audit   'lodash.once': [ '4.1.1' ],
+66 silly audit   long: [ '5.3.2' ],
+66 silly audit   'lru-cache': [ '7.18.3' ],
+66 silly audit   'lru.min': [ '1.1.2' ],
+66 silly audit   semver: [ '7.7.3' ],
+66 silly audit   'math-intrinsics': [ '1.1.0' ],
+66 silly audit   'media-typer': [ '0.3.0' ],
+66 silly audit   'merge-descriptors': [ '1.0.3' ],
+66 silly audit   methods: [ '1.1.2' ],
+66 silly audit   mime: [ '1.6.0' ],
+66 silly audit   'mime-db': [ '1.52.0' ],
+66 silly audit   'mime-types': [ '2.1.35' ],
+66 silly audit   moment: [ '2.30.1' ],
+66 silly audit   'moment-timezone': [ '0.5.48' ],
+66 silly audit   mysql2: [ '3.15.3' ],
+66 silly audit   'named-placeholders': [ '1.1.3' ],
+66 silly audit   negotiator: [ '0.6.3' ],
+66 silly audit   'object-assign': [ '4.1.1' ],
+66 silly audit   'object-inspect': [ '1.13.4' ],
+66 silly audit   'on-finished': [ '2.4.1' ],
+66 silly audit   parseurl: [ '1.3.3' ],
+66 silly audit   'path-to-regexp': [ '0.1.12' ],
+66 silly audit   'pg-connection-string': [ '2.9.1' ],
+66 silly audit   'proxy-addr': [ '2.0.7' ],
+66 silly audit   qs: [ '6.13.0' ],
+66 silly audit   'range-parser': [ '1.2.1' ],
+66 silly audit   'raw-body': [ '2.5.2' ],
+66 silly audit   'retry-as-promised': [ '7.1.1' ],
+66 silly audit   'safe-buffer': [ '5.2.1' ],
+66 silly audit   'safer-buffer': [ '2.1.2' ],
+66 silly audit   send: [ '0.19.0' ],
+66 silly audit   'seq-queue': [ '0.0.5' ],
+66 silly audit   sequelize: [ '6.37.7' ],
+66 silly audit   'sequelize-pool': [ '7.1.0' ],
+66 silly audit   'serve-static': [ '1.16.2' ],
+66 silly audit   setprototypeof: [ '1.2.0' ],
+66 silly audit   'side-channel': [ '1.1.0' ],
+66 silly audit   'side-channel-list': [ '1.0.0' ],
+66 silly audit   'side-channel-map': [ '1.0.1' ],
+66 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+66 silly audit   sqlstring: [ '2.3.3' ],
+66 silly audit   statuses: [ '2.0.1' ],
+66 silly audit   toidentifier: [ '1.0.1' ],
+66 silly audit   'toposort-class': [ '1.0.1' ],
+66 silly audit   'type-is': [ '1.6.18' ],
+66 silly audit   'undici-types': [ '7.16.0' ],
+66 silly audit   unpipe: [ '1.0.0' ],
+66 silly audit   'utils-merge': [ '1.0.1' ],
+66 silly audit   uuid: [ '8.3.2' ],
+66 silly audit   validator: [ '13.15.15' ],
+66 silly audit   vary: [ '1.1.2' ],
+66 silly audit   wkx: [ '0.5.0' ]
+66 silly audit }
+67 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 449ms
+68 silly audit report {
+68 silly audit report   validator: [
+68 silly audit report     {
+68 silly audit report       id: 1108959,
+68 silly audit report       url: 'https://github.com/advisories/GHSA-9965-vmph-33xx',
+68 silly audit report       title: 'validator.js has a URL validation bypass vulnerability in its isURL function',
+68 silly audit report       severity: 'moderate',
+68 silly audit report       vulnerable_versions: '<=13.15.15',
+68 silly audit report       cwe: [Array],
+68 silly audit report       cvss: [Object]
+68 silly audit report     }
+68 silly audit report   ]
+68 silly audit report }
+69 silly packumentCache corgi:https://registry.npmjs.org/validator cache-miss
+70 http cache https://registry.npmjs.org/validator 19ms (cache hit)
+71 silly packumentCache corgi:https://registry.npmjs.org/validator set size:167952 disposed:false
+72 silly packumentCache corgi:https://registry.npmjs.org/sequelize cache-miss
+73 http cache https://registry.npmjs.org/sequelize 10ms (cache hit)
+74 silly packumentCache corgi:https://registry.npmjs.org/sequelize set size:1342524 disposed:false
+75 silly REMOVE node_modules/yallist
+76 silly REMOVE node_modules/wrappy
+77 silly REMOVE node_modules/wide-align
+78 silly REMOVE node_modules/whatwg-url
+79 silly REMOVE node_modules/webidl-conversions
+80 silly REMOVE node_modules/util-deprecate
+81 silly REMOVE node_modules/tr46
+82 silly REMOVE node_modules/tar
+83 silly REMOVE node_modules/strip-ansi
+84 silly REMOVE node_modules/string-width
+85 silly REMOVE node_modules/string_decoder
+86 silly REMOVE node_modules/signal-exit
+87 silly REMOVE node_modules/set-blocking
+88 silly REMOVE node_modules/rimraf
+89 silly REMOVE node_modules/readable-stream
+90 silly REMOVE node_modules/path-is-absolute
+91 silly REMOVE node_modules/once
+92 silly REMOVE node_modules/npmlog
+93 silly REMOVE node_modules/nopt
+94 silly REMOVE node_modules/node-fetch
+95 silly REMOVE node_modules/node-addon-api
+96 silly REMOVE node_modules/mkdirp
+97 silly REMOVE node_modules/minizlib
+98 silly REMOVE node_modules/minizlib/node_modules/minipass
+99 silly REMOVE node_modules/minipass
+100 silly REMOVE node_modules/minimatch
+101 silly REMOVE node_modules/make-dir
+102 silly REMOVE node_modules/make-dir/node_modules/semver
+103 silly REMOVE node_modules/is-fullwidth-code-point
+104 silly REMOVE node_modules/inflight
+105 silly REMOVE node_modules/https-proxy-agent
+106 silly REMOVE node_modules/https-proxy-agent/node_modules/ms
+107 silly REMOVE node_modules/https-proxy-agent/node_modules/debug
+108 silly REMOVE node_modules/has-unicode
+109 silly REMOVE node_modules/glob
+110 silly REMOVE node_modules/gauge
+111 silly REMOVE node_modules/fs.realpath
+112 silly REMOVE node_modules/fs-minipass
+113 silly REMOVE node_modules/fs-minipass/node_modules/minipass
+114 silly REMOVE node_modules/emoji-regex
+115 silly REMOVE node_modules/detect-libc
+116 silly REMOVE node_modules/delegates
+117 silly REMOVE node_modules/console-control-strings
+118 silly REMOVE node_modules/concat-map
+119 silly REMOVE node_modules/color-support
+120 silly REMOVE node_modules/chownr
+121 silly REMOVE node_modules/brace-expansion
+122 silly REMOVE node_modules/bcrypt
+123 silly REMOVE node_modules/balanced-match
+124 silly REMOVE node_modules/are-we-there-yet
+125 silly REMOVE node_modules/aproba
+126 silly REMOVE node_modules/ansi-regex
+127 silly REMOVE node_modules/agent-base
+128 silly REMOVE node_modules/agent-base/node_modules/ms
+129 silly REMOVE node_modules/agent-base/node_modules/debug
+130 silly REMOVE node_modules/abbrev
+131 silly REMOVE node_modules/@mapbox/node-pre-gyp
+132 verbose cwd D:\Assignment\Công nghệ phân mềm\SoftE-Project-251\backend
+133 verbose os Windows_NT 10.0.26200
+134 verbose node v22.20.0
+135 verbose npm  v10.9.3
+136 verbose exit 0
+137 info ok
