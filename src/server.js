@@ -66,13 +66,14 @@ const port = process.env.PORT || 3000;
 sequelize
   .authenticate()
   .then(async () => {
-    console.log("DB connected");
+    console.log("✅ Database connected successfully!");
     await seedUsers();
-    app.listen(port, () =>
-      console.log(`✅ Server listening on http://localhost:${port}`)
-    );
+    app.listen(port, "0.0.0.0", () => {
+      console.log(`🚀 Server is running on port ${port}`);
+    });
   })
   .catch((e) => {
     console.error("❌ DB connect error:", e);
     process.exit(1);
   });
+
