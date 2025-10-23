@@ -1,8 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import bcrypt from "bcryptjs";
-
+import bcrypt from "bcrypt";
 import { sequelize } from "./config/database.js";
 import "./models/index.js";
 import { Role, User } from "./models/index.js";
