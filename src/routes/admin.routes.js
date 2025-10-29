@@ -1,9 +1,21 @@
 import express from "express";
 import bcrypt from "bcrypt";
-import { User, Role } from "../models/index.js";
-
+import { User, Role , Tutor} from "../models/index.js";
+import {
+  getAllDocuments,
+  approveDocument,
+  rejectDocument,
+  getDocumentStats,
+} from "../controllers/adminDocumentController.js";
 const router = express.Router();
+router.get("/documents", getAllDocuments);
 
+// ✅ Duyệt tài liệu
+router.put("/documents/approve/:id", approveDocument);
+router.get("/documents/stats", getDocumentStats);
+
+// ❌ Từ chối tài liệu
+router.put("/documents/reject/:id", rejectDocument);
 // 🟦 Lấy danh sách user
 router.get("/users", async (req, res) => {
   try {
@@ -46,7 +58,25 @@ router.post("/users", async (req, res) => {
       role_id: foundRole.id,
     });
 
+    // ✅ Đặt đúng chỗ: bên trong try, sau khi tạo user
+    if (role === "tutor") {
+      await Tutor.create({
+        user_id: user.id,
+        name: full_name || "Chưa cập nhật",
+        email,
+        rating_avg: 0,
+        total_students: 0,
+        completed_sessions: 0,
+        created_at: new Date(),
+        updated_at: new Date(),
+      });
+    }
+
     res.json({
+      message:
+        role === "tutor"
+          ? "Tutor account created successfully (empty profile)"
+          : "User created successfully",
       id: user.id,
       email: user.email,
       full_name: user.full_name,
@@ -57,6 +87,7 @@ router.post("/users", async (req, res) => {
     res.status(500).json({ message: "Server error (POST)" });
   }
 });
+
 
 // 🟨 Cập nhật user
 router.put("/users/:id", async (req, res) => {

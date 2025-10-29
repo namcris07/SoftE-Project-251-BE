@@ -1,9 +1,13 @@
 import express from "express";
-import { User } from "../models/index.js";
+import { getUserProfile } from "../controllers/user.controller.js";
+import { auth } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
-// GET all users
+// ✅ Lấy thông tin user hiện tại
+router.get("/me", auth, getUserProfile);
+
+// ✅ Lấy tất cả user (admin)
 router.get("/", async (req, res) => {
   try {
     const users = await User.findAll({

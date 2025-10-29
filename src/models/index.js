@@ -1,5 +1,10 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config/database.js";
+import { Tutor } from "./Tutor.js";
+import { TutorSubject } from "./TutorSubject.js";
+import { TutorAvailability } from "./TutorAvailability.js";
+import { TutorMaterial } from "./TutorMaterial.js";
+import { TutorFeedback } from "./TutorFeedback.js";
 
 export const Role = sequelize.define("role", {
   name: { type: DataTypes.STRING(32), unique: true, allowNull: false },
@@ -33,14 +38,6 @@ export const User = sequelize.define(
 );
 
 
-export const TutorProfile = sequelize.define("tutor_profile", {
-  specialization: { type: DataTypes.TEXT },
-  bio: { type: DataTypes.TEXT },
-  hourly_rate: { type: DataTypes.INTEGER },
-  rating_avg: { type: DataTypes.DECIMAL(3,2), defaultValue: 0.0 },
-  total_students: { type: DataTypes.INTEGER, defaultValue: 0 },
-  completed_sessions: { type: DataTypes.INTEGER, defaultValue: 0 },
-});
 
 export const StudentProfile = sequelize.define("student_profile", {
   student_code: { type: DataTypes.STRING(32) },
@@ -64,7 +61,18 @@ export const Session = sequelize.define("session", {
 });
 
 export const Booking = sequelize.define("booking", {
-  status: { type: DataTypes.ENUM("pending","confirmed","cancelled","completed"), defaultValue: "pending" },
+  status: {
+    type: DataTypes.ENUM("pending", "confirmed", "cancelled", "completed"),
+    defaultValue: "pending",
+  },
+  session_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  student_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
 });
 
 export const Payment = sequelize.define("payment", {
@@ -95,6 +103,8 @@ export const Notification = sequelize.define("notification", {
   body: { type: DataTypes.TEXT },
   is_read: { type: DataTypes.BOOLEAN, defaultValue: false },
 });
+User.hasOne(Tutor, { foreignKey: "user_id", as: "tutorProfile" });
+Tutor.belongsTo(User, { foreignKey: "user_id", as: "user" });
 
 export const AuditLog = sequelize.define("audit_log", {
   action: { type: DataTypes.STRING(128), allowNull: false },
@@ -115,8 +125,6 @@ Department.hasMany(Subject); Subject.belongsTo(Department);
 Role.hasMany(User, { foreignKey: { name: "role_id", allowNull: false } });
 User.belongsTo(Role, { foreignKey: { name: "role_id", allowNull: false } });
 
-User.hasOne(TutorProfile, { foreignKey: { name: "user_id", allowNull: false }, onDelete: "CASCADE" });
-TutorProfile.belongsTo(User, { foreignKey: "user_id" });
 
 User.hasOne(StudentProfile, { foreignKey: { name: "user_id", allowNull: false }, onDelete: "CASCADE" });
 StudentProfile.belongsTo(User, { foreignKey: "user_id" });
@@ -133,7 +141,16 @@ Subject.hasMany(Session); Session.belongsTo(Subject);
 User.hasMany(Session, { foreignKey: { name: "created_by_student_id" } });
 Session.belongsTo(User, { as: "created_by_student", foreignKey: "created_by_student_id" });
 
-Session.hasMany(Booking); Booking.belongsTo(Session);
+// ===================== Session & Booking =====================
+Session.hasMany(Booking, {
+  foreignKey: { name: "session_id", allowNull: false },
+  onDelete: "CASCADE",
+});
+
+Booking.belongsTo(Session, {
+  foreignKey: { name: "session_id", allowNull: false },
+});
+
 User.hasMany(Booking, { foreignKey: { name: "student_id", allowNull: false }, onDelete: "CASCADE" });
 Booking.belongsTo(User, { as: "student", foreignKey: "student_id" });
 
@@ -150,3 +167,4 @@ User.hasMany(AuditLog); AuditLog.belongsTo(User);
 
 User.hasMany(Approval, { foreignKey: "submitted_by" });
 User.hasMany(Approval, { foreignKey: "reviewed_by" });
+export { Tutor, TutorSubject, TutorAvailability, TutorMaterial, TutorFeedback };

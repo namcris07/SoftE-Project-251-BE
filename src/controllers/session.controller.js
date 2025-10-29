@@ -4,7 +4,21 @@ export const listSessions = async (_req, res) => {
   const items = await Session.findAll({ include: [{ model: User, as: "tutor" }, Subject] });
   res.json(items);
 };
-
+export const getAvailableSessions = async (req, res) => {
+  try {
+    const sessions = await Session.findAll({
+      where: { status: "pending" },
+      include: [
+        { model: User, as: "tutor", attributes: ["id", "full_name"] },
+        { model: Subject, attributes: ["id", "name"] },
+      ],
+    });
+    res.json(sessions);
+  } catch (err) {
+    console.error("❌ Lỗi getAvailableSessions:", err);
+    res.status(500).json({ message: "Lỗi server" });
+  }
+};
 export const createSession = async (req, res) => {
   const { tutor_id, subject_id, start_at, end_at, location, price_per_hour, total_price } = req.body;
   if (!tutor_id || !start_at || !end_at) return res.status(400).json({ message: "Missing required fields" });

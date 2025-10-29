@@ -9,6 +9,15 @@ export const sequelize = new Sequelize(
     port: Number(process.env.DB_PORT || 3306),
     dialect: "mysql",
     logging: false,
-    define: { underscored: true, freezeTableName: false, timestamps: false },
+    dialectOptions: {
+      charset: "utf8mb4", // ✅ Cho phép ký tự tiếng Việt, emoji, vv.
+    },
+    define: {
+      underscored: true,
+      freezeTableName: false,
+      timestamps: false,
+      charset: "utf8mb4",
+      collate: "utf8mb4_unicode_ci",
+    },
   }
 );
