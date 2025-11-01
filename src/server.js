@@ -15,12 +15,15 @@ import conversationRoutes from "./routes/conversation.routes.js";
 import contactRoutes from "./routes/contact.routes.js";
 import documentRoutes from "./routes/documentRoutes.js";
 import tutorProfileRoutes from "./routes/tutorProfile.routes.js";
+import swaggerUi from "swagger-ui-express";
+import swaggerFile from './config/swagger-output.json' with { type: 'json' };
 import path from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
 const app = express();
 app.use(cors({ origin: "*" }));
 app.use(express.json());
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 // ✅ Tạo biến __dirname vì đang dùng ES Module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
