@@ -2,9 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import bcrypt from "bcrypt";
-import path from "path";
 import fs from "fs";
-import { fileURLToPath } from "url";
 import { sequelize } from "./config/database.js";
 
 // Import Models
@@ -22,30 +20,23 @@ import conversationRoutes from "./routes/conversation.routes.js";
 import contactRoutes from "./routes/contact.routes.js";
 import documentRoutes from "./routes/documentRoutes.js";
 import tutorProfileRoutes from "./routes/tutorProfile.routes.js";
-<<<<<<< HEAD
 import studentRoutes from "./routes/student.routes.js";
 import { startReminderJob } from "./cron/reminder.job.js";
 import { getNotifications, markAsRead, deleteNotification } from "./controllers/notification.controller.js";
 import { auth } from "./middleware/auth.middleware.js";
-=======
 import swaggerUi from "swagger-ui-express";
 import swaggerFile from './config/swagger-output.json' with { type: 'json' };
 import path from "path";
 import { fileURLToPath } from "url";
-import fs from "fs";
->>>>>>> 14f2ea11c1bf4b1b3e80f28f7eb19eb19ba3d188
 const app = express();
 
 // 1. Cấu hình CORS (Chỉ giữ 1 cái chuẩn nhất cho FE)
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json());
-<<<<<<< HEAD
 
 // 2. Cấu hình đường dẫn tĩnh (Uploads)
-=======
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 // ✅ Tạo biến __dirname vì đang dùng ES Module
->>>>>>> 14f2ea11c1bf4b1b3e80f28f7eb19eb19ba3d188
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Tạo thư mục uploads nếu chưa có
@@ -152,7 +143,7 @@ const port = process.env.PORT || 3000;
 
 sequelize
   // ⚠️ Đổi thành force: true để xóa sạch bảng và tạo lại từ đầu
-  .sync({ alter: true }) 
+  .sync({ force: true }) 
   .then(async () => {  
     await seedUsers(); // Hàm này sẽ tạo Admin (ID 1), Tutor (ID 2), Student (ID 3)
       startReminderJob();

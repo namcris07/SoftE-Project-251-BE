@@ -20,16 +20,12 @@
     "jsonwebtoken": "^9.0.2",
     "multer": "^2.0.2",
     "mysql2": "^3.9.7",
-<<<<<<< HEAD
     "node-cron": "^4.2.1",
     "qs": "^6.14.0",
-    "sequelize": "^6.37.0",
     "tough-cookie": "^6.0.0",
-    "xml2js": "^0.6.2"
-=======
+    "xml2js": "^0.6.2",
     "sequelize": "^6.37.0",
     "swagger-autogen": "^2.23.7",
     "swagger-ui-express": "^5.0.1"
->>>>>>> 14f2ea11c1bf4b1b3e80f28f7eb19eb19ba3d188
   }
 }
