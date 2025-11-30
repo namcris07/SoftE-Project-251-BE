@@ -1,7 +1,15 @@
-import { User, Tutor, TutorSubject, TutorAvailability, TutorMaterial, TutorFeedback } from "../models/index.js";
+
 import multer from "multer";
 import path from "path";
 import fs from "fs";
+import { 
+  User, 
+  Tutor, 
+  TutorSubject, 
+  TutorAvailability, 
+  TutorMaterial, 
+  TutorFeedback 
+} from "../models/index.js";
 // Bản đồ ngày trong tuần (dạng số → tiếng Việt)
 const weekdayMap = {
   0: "Chủ nhật",
@@ -52,34 +60,35 @@ export const upload = multer({ storage });
 // 📤 API upload avatar
 export const uploadTutorAvatar = async (req, res) => {
   try {
-    console.log("📥 Nhận yêu cầu upload avatar...");
-    if (!req.file) {
-      console.log("❌ Không có file nào được gửi!");
-      return res.status(400).json({ message: "Không có file nào được tải lên" });
-    }
+    if (!req.file) return res.status(400).json({ message: "Chưa chọn file" });
 
     const userId = req.user.id;
+    // Đường dẫn tương đối lưu trong DB (VD: /uploads/avatars/filename.jpg)
     const avatarUrl = `/uploads/avatars/${req.file.filename}`;
-    console.log("🧩 File nhận được:", req.file.filename);
 
-    const tutor = await Tutor.findOne({ where: { user_id: userId } });
-    if (!tutor) {
-      console.log("❌ Không tìm thấy hồ sơ tutor cho user_id =", userId);
-      return res.status(404).json({ message: "Không tìm thấy hồ sơ giảng viên" });
-    }
+    // ✅ QUAN TRỌNG: Cập nhật bảng User (Nơi API Search lấy dữ liệu)
+    await User.update(
+      { avatar_url: avatarUrl }, 
+      { where: { id: userId } }
+    );
 
-    await Tutor.update({ avatar_url: avatarUrl }, { where: { user_id: userId } });
-    console.log("✅ Đã cập nhật avatar_url vào DB:", avatarUrl);
+    // Cập nhật luôn bảng Tutor cho đồng bộ (Optional)
+    await Tutor.update(
+      { avatar_url: avatarUrl }, 
+      { where: { user_id: userId } }
+    );
 
+    // Trả về đường dẫn đầy đủ cho Frontend hiển thị ngay
     const fullUrl = `${process.env.BASE_URL || "http://localhost:3000"}${avatarUrl}`;
-return res.json({
-  message: "✅ Upload thành công",
-  avatarUrl: fullUrl,
-});
+
+    res.json({ 
+      message: "Upload ảnh thành công", 
+      avatarUrl: fullUrl 
+    });
 
   } catch (err) {
-    console.error("❌ Upload avatar lỗi:", err);
-    res.status(500).json({ message: "Lỗi server khi upload ảnh", error: err.message });
+    console.error("❌ Upload avatar error:", err);
+    res.status(500).json({ message: "Lỗi server khi upload ảnh" });
   }
 };
 
@@ -120,11 +129,11 @@ export async function getTutorProfileView(req, res) {
     // 4️⃣ Tài liệu
     const materialsRaw = await TutorMaterial.findAll({
       where: { tutor_id: tutorId },
-      order: [["upload_date", "DESC"]],
+      order: [["created_at", "DESC"]],
     });
     const materialsMap = new Map();
     for (const m of materialsRaw) {
-      const key = m.title + "|" + m.upload_date;
+      const key = m.title + "|" + m.created_at;
       if (!materialsMap.has(key)) {
         materialsMap.set(key, {
           id: m.material_id ?? m.id,
@@ -163,21 +172,22 @@ export async function getTutorProfileView(req, res) {
     const recentFeedback = Array.from(feedbackMap.values());
 
     // 6️⃣ Hồ sơ chính
-    const profileData = {
-  name: u.full_name,
-  email: u.email,
-  phone: tp.phone,
-  department: tp.department,
-  specialization: tp.specialization,
-  experience_years: tp.experience_years || null,
-  education: tp.education,
-  bio: tp.bio,
-  hourlyRate: tp.hourly_rate,
-  rating: Number(tp.rating_avg || 0),
-  totalStudents: tp.total_students,
-  completedSessions: tp.completed_sessions,
-  avatarUrl: tp.avatar_url || null
-};
+   const profileData = {
+      name: u.full_name,
+      email: u.email,
+      phone: tp.phone,
+      department: tp.department,
+      specialization: tp.specialization,
+      experience_years: tp.experience_years || null,
+      education: tp.education,
+      bio: tp.bio,
+      hourlyRate: tp.hourly_rate,
+      rating: Number(tp.rating_avg || 0),
+      totalStudents: tp.total_students,
+      completedSessions: tp.completed_sessions,
+      // ✅ Ưu tiên lấy ảnh từ User (vì Header dùng bảng User)
+      avatarUrl: u.avatar_url ? `${process.env.BASE_URL || "http://localhost:3000"}${u.avatar_url}` : null
+    };
 
 
     // 7️⃣ Trả về FE
@@ -198,42 +208,50 @@ export const updateTutorProfile = async (req, res) => {
     const userId = req.user?.id || req.body.user_id;
     if (!userId) return res.status(400).json({ error: "Missing user_id" });
 
-    // ✅ Lấy tutor theo user_id
     const tutor = await Tutor.findOne({ where: { user_id: userId } });
     if (!tutor) return res.status(404).json({ error: "Tutor not found" });
 
-    // ✅ Destructure tất cả field từ req.body
     const {
-      name,
-      email,
-      phone,
-      department,
-      specialization,
-      experience_years,
-      education,
-      bio,
-      hourly_rate,
+      name, email, phone, department, 
+      experience_years, education, bio, hourly_rate,
+      subjects // ✅ Nhận thêm mảng subjects từ Frontend (VD: ["Toán", "Lý"])
     } = req.body;
 
-    // ✅ Cập nhật
+    // A. Cập nhật thông tin cơ bản (Bảng Tutor)
+    // Lưu ý: Ta cũng lưu danh sách môn vào 'specialization' dạng chuỗi để tiện hiển thị nhanh
+    const specializationString = subjects && Array.isArray(subjects) ? subjects.join(", ") : tutor.specialization;
+
     await tutor.update({
-      name: name || tutor.name,
-      email: email || tutor.email,
       phone: phone || tutor.phone,
       department: department || tutor.department,
-      specialization: specialization || tutor.specialization,
+      specialization: specializationString, 
       experience_years: experience_years || tutor.experience_years,
       education: education || tutor.education,
       bio: bio || tutor.bio,
       hourly_rate: Number(hourly_rate) || tutor.hourly_rate || 0,
-      avatar_url: tutor.avatar_url || null,
       updated_at: new Date(),
     });
 
-     await User.update(
-      { full_name: name },
-      { where: { id: userId } }
-    );
+    // B. Cập nhật Tên (Bảng User)
+    if (name) {
+      await User.update({ full_name: name }, { where: { id: userId } });
+    }
+
+    // C. ✅ Cập nhật Bảng TutorSubject (Quan trọng cho tìm kiếm/lọc)
+    if (subjects && Array.isArray(subjects)) {
+      // 1. Xóa môn cũ
+      await TutorSubject.destroy({ where: { tutor_id: tutor.tutor_id } });
+      
+      // 2. Thêm môn mới
+      if (subjects.length > 0) {
+        const subjectData = subjects.map(sub => ({
+          tutor_id: tutor.tutor_id,
+          subject: sub
+        }));
+        await TutorSubject.bulkCreate(subjectData);
+      }
+    }
+
     res.json({
       message: "Profile updated successfully",
       profileData: tutor,
@@ -246,4 +264,3 @@ export const updateTutorProfile = async (req, res) => {
     });
   }
 };
-

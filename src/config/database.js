@@ -15,7 +15,7 @@ export const sequelize = new Sequelize(
     define: {
       underscored: true,
       freezeTableName: false,
-      timestamps: false,
+      timestamps: true,
       charset: "utf8mb4",
       collate: "utf8mb4_unicode_ci",
     },

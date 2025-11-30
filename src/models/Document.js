@@ -25,7 +25,7 @@ export const Document = sequelize.define("Document", {
   },
 
   tutor_id: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.INTEGER.UNSIGNED,
     allowNull: true,
   },
 
@@ -68,7 +68,10 @@ export const Document = sequelize.define("Document", {
     type: DataTypes.ENUM("public", "private"),
     defaultValue: "public",
   },
-
+  course_id: { 
+    type: DataTypes.UUID, 
+    allowNull: true 
+  },
   status: {
     type: DataTypes.ENUM("pending", "approved", "rejected"),
     defaultValue: "pending", // ✅ mặc định pending, admin mới duyệt sau

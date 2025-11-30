@@ -8,6 +8,7 @@ export const Message = sequelize.define(
     tutor_id: { type: DataTypes.BIGINT.UNSIGNED, allowNull: false },
     sender_id: { type: DataTypes.BIGINT.UNSIGNED, allowNull: false },
     content: { type: DataTypes.TEXT, allowNull: false },
+    is_read: { type: DataTypes.BOOLEAN, defaultValue: false },
   },
   {
     tableName: "messages",

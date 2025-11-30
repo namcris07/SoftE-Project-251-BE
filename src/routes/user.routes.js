@@ -1,24 +1,26 @@
 import express from "express";
-import { getUserProfile } from "../controllers/user.controller.js";
-import { auth } from "../middleware/auth.middleware.js";
+import { 
+  getAllUsers, 
+  createUser, 
+  updateUser, 
+  deleteUser, 
+  getUserProfile,
+  getContacts 
+} from "../controllers/user.controller.js";
+// Import cả auth và checkAdmin
+import { auth, checkAdmin } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
-// ✅ Lấy thông tin user hiện tại
+// ✅ Route công khai hoặc cá nhân (Chỉ cần đăng nhập)
 router.get("/me", auth, getUserProfile);
 
-// ✅ Lấy tất cả user (admin)
-router.get("/", async (req, res) => {
-  try {
-    const users = await User.findAll({
-      attributes: ["id", "full_name", "email", "role", "createdAt"],
-      order: [["id", "ASC"]],
-    });
-    res.json(users);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "Server error" });
-  }
-});
+// 🛡️ Cụm Route dành riêng cho Admin (Có thêm checkAdmin)
+// Áp dụng auth trước để lấy user, sau đó checkAdmin để kiểm tra quyền
+router.get("/", auth, checkAdmin, getAllUsers);       // Xem danh sách
+router.post("/", auth, checkAdmin, createUser);   
+router.get("/contacts", auth, getContacts);    // Lấy danh sách liên hệ
+router.put("/:id", auth, checkAdmin, updateUser);     // Cập nhật
+router.delete("/:id", auth, checkAdmin, deleteUser);  // Xóa
 
 export default router;
